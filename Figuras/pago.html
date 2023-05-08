@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jvega</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="login.html">Login</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="compra.html">Catalogo</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="bg-white rounded-lg shadow-sm p-5">
+
+                    <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                <i class="fa fa-credit-card"></i>
+                                Visa
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link  active rounded-pill">
+                                <i class="fa fa-paypal"></i>
+                                Paypal
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#nav-tab-bank" class="nav-link active rounded-pill">
+                                <i class="fa fa-university"></i>
+                                Banco Estado
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+
+
+                        <div id="nav-tab-card" class="tab-pane fade show active">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="username">NOMBRE COMPLETO (EN LA TARJETA)</label>
+                                    <input type="text" name="username" placeholder="WACOLDO LOPEZ" required
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardNumber">NUMERO DE TARJETA</label>
+                                    <div class="input-group">
+                                        <input type="text" name="cardNumber" placeholder="12345678910"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label><span class="hidden-xs">EXPIRACION</span></label>
+                                            <div class="input-group">
+                                                <input type="number" placeholder="MM" name="" class="form-control"
+                                                    required>
+                                                <input type="number" placeholder="YY" name="" class="form-control"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-4">
+                                            <label data-toggle="tooltip"
+                                                title="Three-digits code on the back of your card">CVV
+                                                <i class="fa fa-question-circle"></i>
+                                            </label>
+                                            <input type="text" required class="form-control">
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <a href="index.html" class=" btn btn-primary rounded-pill">Comprar</a>
+                            </form>
+                        </div>
+                        
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <h2>Quienes Somos</h2>
+                <div class="terms">
+                    <p>Esta pagina fue hecha con el fin de poder vender figuras de accion o de anime.</p>
+                </div>
+            </div>
+
+
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="#">KEVEGA</a>
+
+            </div>
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2023 <b>KEVEGA</b></p>
+        </div>
+    </footer>
+</body>
+
+</html>
