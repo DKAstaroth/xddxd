@@ -1,0 +1,139 @@
+{% extends 'core/base2.html' %}
+
+{% block contenido %}
+<div class="container">
+  <h1>Agregar figuras</h1>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #007bff;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .table {
+      margin-top: 30px;
+    }
+
+    .editBtn,
+    .deleteBtn {
+      margin-right: 5px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    .btn-danger:hover {
+      background-color: #a71d2a;
+      border-color: #a71d2a;
+    }
+
+    .table thead th {
+      color: #007bff;
+      font-weight: bold;
+      border-color: #dee2e6;
+    }
+  </style>
+  <form id="userForm" class="mb-3" action="/crearFigura/" method="POST">{% csrf_token %}
+    <!-- nombre -->
+    <div class="form-group">
+      <label for="name" style="color: #007bff; font-weight: bold;">Nombre:</label>
+      <br>
+      <input type="text" id="name" name="name" class="form-control">
+    </div>
+    <!-- valor -->
+    <div class="form-group">
+      <label for="valor" style="color: #007bff; font-weight: bold;">Valor</label>
+      <br>
+      <input type="text" id="valor" name="valor" class="form-control">
+    </div>
+    <!-- altura -->
+    <div class="form-group">
+      <label for="altura" style="color: #007bff; font-weight: bold;">Altura</label>
+      <br>
+      <input type="text" id="altura" name="altura" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Figura</button>
+  </form>
+
+  <table id="userTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th style="color: #007bff; font-weight: bold;">ID</th>
+        <th style="color: #007bff; font-weight: bold;">Nombre</th>
+        <th style="color: #007bff; font-weight: bold;">Valor</th>
+        <th>Altura</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for f in figuras %}
+      <tr>
+        <td>{{f.id}}</td>
+        <td>{{f.nombre}}</td>
+        <td>{{f.valor}}</td>
+        <td>{{f.altura}}</td>
+        <td>
+          <a href="eliminarFigura/{{f.id}}">Eliminar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var users = [];
+
+    function refreshTable() {
+      var tableBody = $('#userTable tbody');
+      tableBody.empty();
+
+      <!-- código 2 -->
+
+      $('.editBtn').click(function () {
+        var index = $(this).data('index');
+        var user = users[index];
+        $('#name').val(user.name);
+        $('#valor').val(user.valor);
+        $('#altura').val(user.altura);
+        users.splice(index, 1);
+        refreshTable();
+      });
+
+      $('.deleteBtn').click(function () {
+        var index = $(this).data('index');
+        users.splice(index, 1);
+        refreshTable();
+      });
+    }
+    //código 1
+
+  });
+</script>
+{% endblock contenido %}

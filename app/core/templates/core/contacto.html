@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+        <div id="app"></div>
+        
+        <div class="container-form">
+            <div class="info-form">
+                <h2 style="color: rgb(204,200,200)">Contáctanos</h2>
+                <p style="color: rgb(204,200,200)"></pstyle>En caso de que tenga alguna duda con el funcionamiento de la pagina contactenos. 
+                    Debe poner sus datos personales y un mensaje explicando cuyo caso tenga por resolver</p>
+                <a href="#"><i class="fa fa-phone"></i> +569 12345678</a>
+                <a href="#"><i class="fa fa-envelope" id="respuesta"></i>duocduoc@duocuc.cl</a>
+                <a href="#"><i class="fa fa-map-marked"></i> Concepcion, Chile</a>
+            </div>
+            <form action="#" autocomplete="off">
+                <input type="text" name="nombre" placeholder="Tu Nombre" class="campo">
+                <input type="emal" name="email" placeholder="Tu Email" class="campo">
+                <textarea name="mensaje" placeholder="Tu Mensaje..."></textarea>
+                <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
+            </form>
+        </div>
+
+
+{% endblock contenido %}

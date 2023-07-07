@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 162, 0, 0.8);
+
+}
+
+.caja__trasera div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button {
+    margin-top: 30px;
+}
+
+.caja__trasera div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+    background: #fff;
+    color: rgba(255, 162, 0, 0.8);
+}
+
+
+
+table{
+    width: 80%;
+    margin: 40px auto;
+    background: rgb(124,154,167);
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    border: 1px solid rgb(204,200,200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(204,200,200);
+}
+
+input[type="text"],input[type="number"],input[type="email"],input[type="password"]{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    background:#4b99d8 ;
+}
+
+footer {
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../Images/background-footer.svg);
+    background-size: cover;
+
+    /*background-color: #d0f0f8;
+    -webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
+}
+
+.container__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img {
+    width: 180px;
+}
+
+.box__footer .terms {
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: rgba(243, 210, 153, 0.8);
+    font-size: 18px;
+}
+
+.box__footer h2 {
+    margin-bottom: 30px;
+    color: rgba(243, 210, 153, 0.8);
+    font-weight: 700;
+}
+
+.box__footer a {
+    margin-top: 10px;
+    color: rgba(243, 210, 153, 0.8);
+    font-weight: 600;
+}
+
+.box__footer a:hover {
+    opacity: 0.8;
+}
+
+.box__footer a .fab {
+    font-size: 20px;
+}
+
+.box__copyright {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p {
+    margin-top: 20px;
+    color: rgba(243, 210, 153, 0.8);
+}
+
+.box__copyright hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(243, 210, 153, 0.8);
+}
+
+.content-all {
+    width: 210px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 50px;
+}

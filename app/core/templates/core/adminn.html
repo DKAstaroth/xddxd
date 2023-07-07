@@ -1,0 +1,60 @@
+
+{% extends 'core/base2.html' %}
+
+{% block contenido %}
+
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="rut">Rut</label>
+                        <br>
+                        <input type="text" name="rut" id="rut">
+                    </div>
+                    <div>
+                        <label for="names">Nombre</label>
+                        <br>
+                        <input type="text" name="names" id="names">
+                    </div>
+                    <div>
+                        <label for="emaill">Correo</label>
+                        <br>
+                        <input type="email" name="emaill" id="emaill">
+                    </div>
+                    <div>
+                        <label for="contra">Contraseña</label>
+                        <br>
+                        <input type="password" name="contra" id="contra">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Subir">
+                        <input type="reset" value="Resetear">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Rut</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Constraseña</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+
+
+
+{% endblock contenido %}
+
+
